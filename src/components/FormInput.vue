@@ -268,6 +268,8 @@ import axios from 'axios'
 const emit = defineEmits(['hasilManual'])
 const isSubmitting = ref(false)
 
+const api = import.meta.env.VITE_API_URL
+
 const form = reactive({
   nama: '',
   gender: '',
@@ -502,7 +504,7 @@ const handleSubmit = async () => {
 
   isSubmitting.value = true
   try {
-    const payload = {
+    const payload =  {
       nama: form.nama,
       gender: form.gender,
       tinggi: Number(form.tinggi),
@@ -515,7 +517,7 @@ const handleSubmit = async () => {
       scores: filledValidScores,
     }
 
-    const res = await axios.post('http://127.0.0.1:5000/predict', payload)
+    const res = await axios.post(`${api}/predict`, payload)
     emit('hasilManual', res.data)
   } catch (err) {
     console.error('Gagal mengambil data dari backend:', err)

@@ -7,8 +7,8 @@
     </p>
 
     <label
-      class="mt-4 w-full flex flex-col items-center justify-center text-center 
-             border-2 border-dashed border-[#0A5C44]/40 rounded-2xl 
+      class="mt-4 w-full flex flex-col items-center justify-center text-center
+             border-2 border-dashed border-[#0A5C44]/40 rounded-2xl
              py-8 cursor-pointer hover:border-[#0A5C44] transition-all"
     >
       <svg
@@ -54,7 +54,7 @@ const uploadExcel = async (e) => {
 
   try {
     const res = await axios.post(
-      `${api}/predict-excel`,  // 🔥 SUDAH BENAR
+      `${api}/predict-excel`,
       formData,
       {
         headers: { "Content-Type": "multipart/form-data" },
@@ -65,7 +65,7 @@ const uploadExcel = async (e) => {
 
   } catch (err) {
     console.error(err)
-    alert("Gagal memproses Excel! Periksa kembali file atau server API.")
+    alert("Gagal memproses File!")
   }
 }
 </script>
