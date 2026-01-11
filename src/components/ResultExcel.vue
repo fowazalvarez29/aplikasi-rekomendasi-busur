@@ -11,18 +11,18 @@
         <div class="flex items-center justify-between">
           <h2 class="text-2xl font-semibold text-[#0A5C44]">Hasil Rekomendasi</h2>
 
-          <button
+          <!-- <button
             @click="exportPDF(item)"
             class="bg-[#0A5C44] hover:bg-[#094e3b] text-white px-6 py-2 rounded-xl text-sm shadow-sm"
           >
             Cetak PDF
-          </button>
+          </button> -->
         </div>
       </div>
 
       <!-- Body -->
       <div class="px-6 py-6">
-        
+
         <!-- Summary -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
@@ -95,7 +95,7 @@
             </thead>
 
             <tbody>
-              <tr 
+              <tr
                 v-for="rec in item.rekomendasi"
                 :key="rec.TinggiBusur + '-' + rec.BeratBusur"
                 class="border-t hover:bg-[#f9fdfb]"
