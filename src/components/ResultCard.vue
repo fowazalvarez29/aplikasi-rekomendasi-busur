@@ -11,7 +11,7 @@
 
     <!-- Body -->
     <div class="px-6 py-6">
-      <!-- Tombol Export PDF -->
+      <!-- Tombol Export PDF
       <div class="flex justify-end mb-4">
         <button
           @click="exportPDF"
@@ -19,7 +19,7 @@
         >
           Cetak PDF
         </button>
-      </div>
+      </div> -->
 
       <!-- Top summary -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -220,7 +220,7 @@ const exportPDF = async () => {
     pageMargins: [40, 70, 40, 60],
 
     header: {
-      margin: [40, 15, 40, 0],   
+      margin: [40, 15, 40, 0],
       alignment: "center",
       stack: [
         { text: "Laporan Rekomendasi Busur Pemanah", bold: true, fontSize: 20, color: "#0A5C44" },
@@ -229,7 +229,7 @@ const exportPDF = async () => {
     },
 
     footer: (currentPage, pageCount) => ({
-      margin: [40, 0, 40, 10],   
+      margin: [40, 0, 40, 10],
       fontSize: 8,
       columns: [
         { text: `Halaman ${currentPage} dari ${pageCount}`, alignment: "right", color: "#666" }
